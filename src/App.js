@@ -37,11 +37,7 @@ const App = () => {
     { path: "/login", element: <Login onLoggedIn={setLoggedInHandler} /> },
     {
       path: "/register",
-      element: (
-        <ProtectedRoute>
-          <Register />
-        </ProtectedRoute>
-      ),
+      element: <Register />,
     },
     {
       path: "/dashboard",
