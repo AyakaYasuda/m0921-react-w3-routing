@@ -74,7 +74,11 @@ const App = () => {
     { path: "*", element: <NotFound /> },
     {
       path: "/messages",
-      element: <Messages />,
+      element: (
+        <ProtectedRoute>
+          <Messages />
+        </ProtectedRoute>
+      ),
       children: [{ path: ":id", element: <Chats /> }],
     },
   ]);
